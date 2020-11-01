@@ -10,4 +10,6 @@ class User < ApplicationRecord
   validates :familyname_furigana, presence: true
   validates :firstname_furigana, presence: true
   validates :date, presence: true
+
+  has_one :address
 end
