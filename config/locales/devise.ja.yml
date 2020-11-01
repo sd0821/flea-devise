@@ -25,6 +25,25 @@ ja:
         unconfirmed_email: 未確認Eメール
         unlock_token: ロック解除用トークン
         updated_at: 更新日
+        nickname: "ニックネーム"
+        family_name: "名字(全角)"
+        first_name: "名前(全角)"
+        familyname_furigana: "名字（カナ）"
+        firstname_furigana: "名前（カナ）"
+        birthday: "生年月日 "
+        postal_code: "郵便番号"
+        prefectures: "都道府県"
+        city: "市区町村"
+        address: "番地"
+        building: "マンション名など"
+        phone_number: "電話番号"
+      address:
+        destination_family_name: "名字（全角）"
+        destination_first_name: "名前(全角)"
+        postal_code: "郵便番号"
+        prefectures_area: "都道府県"
+        municipality: "市区町村"
+        house_number: "番地"
     models:
       user: ユーザ
   devise:
