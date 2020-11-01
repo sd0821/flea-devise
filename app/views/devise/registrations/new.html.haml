@@ -1,37 +1,16 @@
--# %h2 Sign up
--# = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
--#   = render "devise/shared/error_messages", resource: resource
--#   .field
--#     = f.label :email
--#     %br/
--#     = f.email_field :email, autofocus: true, autocomplete: "email"
--#   .field
--#     = f.label :password
--#     - if @minimum_password_length
--#       %em
--#         (#{@minimum_password_length} characters minimum)
--#     %br/
--#     = f.password_field :password, autocomplete: "new-password"
--#   .field
--#     = f.label :password_confirmation
--#     %br/
--#     = f.password_field :password_confirmation, autocomplete: "new-password"
--#   .actions
--#     = f.submit "Sign up"
--# = render "devise/shared/links"
 
 %body
   .Single-Container
     %header.Single-Header
       %h1
-      = link_to image_tag "/logo.png",class: "Furima-Logo"
+      = link_to image_tag("/logo.png", class:"Furima-Logo"), root_path
       %nav.Single-Header__Bar
         %ol
           %li.Active-Name
             会員情報
             .Progress-Status.Active.First
           %li.Second
-            電話番号認証
+            住所
             .Progress-Status
           %li.Therd
             完了
@@ -125,6 +104,6 @@
             =link_to "フリマ利用規約", "#"
           %li
             =link_to "特定商取引に関する表記", "#"
-      = link_to image_tag "/logo.png", class:"Furima-Logo"
+      = link_to image_tag("/logo.png", class:"Furima-Logo"), root_path
       %p
         %small © FURIMA, Inc.
