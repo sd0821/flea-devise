@@ -58,7 +58,7 @@
               = f.password_field "encrypted_password", placeholder: "7文字以上の半角英数字", class: "Form-Group__Input"
               - if @user.errors.any?
                 .error_explanation
-                  - @user.errors.full_messages_for(:password).each do |message|
+                  - @user.errors.full_messages_for(:password_confirmation).each do |message|
                     %li{style: "color:red"}
                       = message
 

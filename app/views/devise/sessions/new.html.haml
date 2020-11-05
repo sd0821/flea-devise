@@ -32,6 +32,9 @@
 
           -#入力欄部分全体
           .login-form-inner
+            - flash.each do |name, msg|
+              %li{style: "color:red"}
+                = content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String)
 
             -#入力欄のクラス（メアド、PW、ロボットでないで共通）
             -#メアド入力欄クラス
