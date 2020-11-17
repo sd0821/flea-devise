@@ -24,8 +24,8 @@
         .Form-Group
           = f.label "name", "お名前"
           %span.Form-Require 必須
-          = f.text_field "destination_family_name", placeholder: "例) 渦巻", class: "Input-Default", value: ""
-          = f.text_field "destination_first_name", placeholder: "例) 鳴門", class: "Input-Default", value: ""
+          = f.text_field "destination_family_name", placeholder: "例) 渦巻", class: "Input-Default"
+          = f.text_field "destination_first_name", placeholder: "例) 鳴門", class: "Input-Default"
           - if @address.errors.any?
             .error_explanation
               - @address.errors.full_messages_for(:destination_family_name).each do |message|
@@ -39,8 +39,8 @@
         .Form-Group
           = f.label "name", "お名前カナ"
           %span.Form-Require 必須
-          = f.text_field "destination_family_name_furigana", placeholder: "例) ウズマキ", class: "Input-Default", value: ""
-          = f.text_field "destination_first_name_furigana", placeholder: "例) ナルト", class: "Input-Default", value: ""
+          = f.text_field "destination_family_name_furigana", placeholder: "例) ウズマキ", class: "Input-Default"
+          = f.text_field "destination_first_name_furigana", placeholder: "例) ナルト", class: "Input-Default"
           - if @address.errors.any?
             .error_explanation
               - @address.errors.full_messages_for(:destination_family_name).each do |message|
@@ -54,7 +54,7 @@
         .Form-Group
           = f.label "zip_code1", "郵便番号"
           %span.Form-Require 必須
-          = f.text_field "postal_code", placeholder: "例) 123-4567", class: "Input-Default", maxlength: "8", pattern: "\\d{3}-\\d{4}", value: ""
+          = f.text_field "postal_code", placeholder: "例) 123-4567", class: "Input-Default", maxlength: "8", pattern: "\\d{3}-\\d{4}"
           - if @address.errors.any?
             .error_explanation
               - @address.errors.full_messages_for(:postal_code).each do |message|
@@ -74,7 +74,7 @@
         .Form-Group
           = f.label "city", "市区町村"
           %span.Form-Require 必須
-          = f.text_field "municipality", placeholder: "例) 横浜市旭区二俣川", class: "Input-Default", value: ""
+          = f.text_field "municipality", placeholder: "例) 横浜市旭区二俣川", class: "Input-Default"
           - if @address.errors.any?
             .error_explanation
               - @address.errors.full_messages_for(:municipality).each do |message|
@@ -83,7 +83,7 @@
         .Form-Group
           = f.label "address1_label", "番地"
           %span.Form-Require 必須
-          = f.text_field "house_number", placeholder: "例) 1-1", class: "Input-Default",  value: ""
+          = f.text_field "house_number", placeholder: "例) 1-1", class: "Input-Default"
           - if @address.errors.any?
             .error_explanation
               - @address.errors.full_messages_for(:house_number).each do |message|
@@ -92,11 +92,11 @@
         .Form-Group
           = f.label "address2_label", "建物名"
           %span.Form-Arbitrary 任意
-          = f.text_field "building", placeholder: "例) ライオンズマンション", class: "Input-Default", value: ""
+          = f.text_field "building", placeholder: "例) ライオンズマンション", class: "Input-Default"
         .Form-Group
           = f.label "address2_label", "電話"
           %span.Form-Arbitrary 任意
-          = f.number_field "tel", placeholder: "例) 1234567890", class: "Input-Default", value: ""
+          = f.number_field "tel", placeholder: "例) 1234567890 ハイフンなしで入力", class: "Input-Default"
         = f.submit "登録する", class: "Btn-Default Btn-Red"
 
 %footer.Single-Footer

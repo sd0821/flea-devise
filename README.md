@@ -12,7 +12,7 @@
 |date |string|null: false|
 
 ### Association
-- has_one :adress,dependent: :destroy
+- has_one :address,dependent: :destroy
 - has_many :items,dependent: :destroy
 - has_one :purchase_management
 
@@ -63,7 +63,7 @@
 - belongs_to:item
 
 
-## adresseesテーブル
+## addresseesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |user_id|references|null: false, foreign_key: true|
