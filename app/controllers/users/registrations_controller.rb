@@ -66,7 +66,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   protected
    
   def address_params
-    params.require(:address).permit(:destination_family_name, :destination_first_name, :destination_family_name_furigana, :destination_first_name_furigana, :postal_code, :prefectures_area, :municipality, :house_number, :building, :tel).merge(user_session)
+    params.require(:address).permit(:destination_family_name, :destination_first_name, :destination_family_name_furigana, :destination_first_name_furigana, :postal_code, :prefectures_area, :municipality, :house_number, :building, :tel)
   end
 
   # GET /resource/edit
